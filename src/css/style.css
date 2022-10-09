@@ -1,0 +1,163 @@
+html{
+    font-size: 62.5%;
+}
+
+
+body{
+    grid-template-areas: "header header"
+                         "section section"
+                         "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.6rem;
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;                       
+}
+
+.header{
+    grid-area: header;
+    display: flex;
+    padding: 50px 40px;
+    align-content: flex-end;
+}
+
+.header img{
+    width: 200px;
+}
+
+@media(max-width: 375px){
+    .header{
+        width: 50vh;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.section{
+    grid-area: section;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-left img{
+    width: 1400px;
+    padding-top: 70px;
+    justify-content: center;
+}
+
+@media (max-width: 375px){
+    .section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2 1fr);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section-left img{
+        width: 50vh;
+    }
+}
+
+.section-right{
+    padding-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 375px){
+    .section-right{
+        display: flex;
+        justify-content: center;
+        padding-left: 20px;
+    }
+
+    .section-right .texto{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .section-right .paragrafo{
+        display: flex;
+        text-align:center;
+        justify-content: center;
+    
+}
+}
+
+.section-right .texto{
+    font-family: 'poppins';
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: white;
+
+}
+
+.section-right .paragrafo{
+    display: flex;
+    text-align: flex-start;
+    justify-content: center;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    padding-top: 30px;
+
+}
+
+.button {
+    text-align: center;
+    padding: 23px 8px;
+    width: 200px;
+    height: 75px;
+    display: block;
+    font-family: 'poppins';
+    font-weight: 400;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: hsl(257, 40%, 49%);
+}
+
+.button-register{
+    color: hsl(257, 40%, 49%);
+    padding-bottom: 50px;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    padding-left: 100px;
+}
+
+.footer .social i{
+    font-size: 50px;
+    transition: 0.3s;
+}
+
+.footer .social a{
+    margin: 20px;
+    color: #fff;
+}
+
+.footer .social a:hover{
+    color:  hsl(300, 69%, 71%);
+}
+
+@media (max-width: 375px){
+    .footer{
+        display: flex;
+        align-items: flex-start;
+        padding-left: 60px;
+        padding-top: 50px;
+    }
+}
